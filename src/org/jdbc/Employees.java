@@ -20,24 +20,21 @@ public class Employees {
 ////			System.out.println(string);
 //			String string2 = executeQuery.getString("sname");
 //			System.out.println(string2);
-		
-			
-			
-		//}
+
+		// }
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","9791915458");
-		String s ="select * from StudentDetails";
+		Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "9791915458");
+		String s = "select * from StudentDetails";
 		PreparedStatement prepareStatement = connection.prepareStatement(s);
 		ResultSet executeQuery = prepareStatement.executeQuery();
 		while (executeQuery.next()) {
 			String string = executeQuery.getString("sname");
 			System.out.println(string);
 
-
-			
 		}
-		
+		System.out.println("sasi");
+		System.out.println("done");
+
 	}
-	
 
 }
